@@ -1,47 +1,43 @@
-# Jeu de société en ligne : Secret 
+# Secret Hitler – Édition Interactive
 
-## Comment lancer le jeu
-1. Téléchargez le fichier `index.html` de ce dépôt.
-2. Ouvrez ce fichier avec n'importe quel navigateur web moderne (Chrome, Firefox, Edge).
-3. Le jeu se lance automatiquement (pensez à activer le son !).
+Adaptation web du jeu de société Secret Hitler, jouable dans le navigateur, seul contre des bots ou à plusieurs sur le même appareil.
 
+Projet informatique, L2 MIASHS, Université Paris Nanterre, 2025.
+Réalisé en binôme avec Taha Turkan.
 
-## Fonctionnalités IA (Optionnelles)
+## Aperçu
 
-Ce projet intègre l'API Google Gemini pour une narration dynamique et une analyse de la partie.
-**Le jeu est entièrement fonctionnel sans clé API.**
+![Capture d'écran](docs/capture.png)
 
-Si il y'a pas de clé :
-1. **Flash Info :** Le jeu utilisera une base de données de phrases pré-définies (mode hors-ligne).
-2. **Analyste IA :** Cette fonctionnalité ne marchera pas mais n'aura pas d'impact sur la partie.
-3. **Article Hitler :** Si Hitler gagne, il y aura seulement affichée une victoire fasciste.
+## Fonctionnalités
 
-### Tester avec l'IA pour une immersion total (Plus d'information dans le rapport, partie 7)
-Si vous souhaitez tester les fonctionnalités génératives :
-1. Lancez le jeu.
-2. Sur l'écran d'accueil, collez votre clé API Gemini dans le champ prévu à cet effet.
-3. La clé n'est stockée que temporairement dans votre navigateur pour la durée de la session.
+- Mode solo contre des bots (rôle aléatoire) et mode spectateur pour regarder les bots jouer
+- Mode multijoueur sur un seul appareil, avec écran de passage entre les joueurs
+- Toutes les phases du jeu : élection, séance législative, pouvoirs présidentiels (investigation, regard, élection spéciale, exécution)
+- Graphe de confiance entre les joueurs
+- Règlement détaillé intégré et musique de fond
+- IA générative avec l'API Gemini (optionnel) : flashs info radio après chaque loi, analyste qui désigne un suspect, article de journal en fin de partie
 
-### Obtenir une clé API gratuite
-Pour tester les fonctionnalités d'IA, vous pouvez générer une clé gratuite en quelques secondes ici :
-**[Google AI Studio](https://aistudio.google.com/app/apikey)**
+## Technologies
 
-1. Connectez-vous avec un compte Google.
-2. Cliquez sur "Create API Key".
-3. Copiez la clé et collez-la dans le jeu.
+HTML, CSS, JavaScript, React 18 (chargé par CDN), API Gemini.
 
+## Lancer le projet
 
-#### Ce dépôt GitHub contient :
+Ouvrir `index.html` dans un navigateur récent (Chrome, Firefox, Edge). Aucune installation n'est nécessaire. Pensez à activer le son.
 
-📁 rapport/
-- le fichier rapport.tex
-- 48 images (png, jpg)
+Le jeu fonctionne entièrement sans clé API : les flashs info utilisent alors des phrases prédéfinies et l'analyste IA est désactivé.
 
-💻 Code source du projet
-index.html : fichier principal permettant de lancer le jeu
+Pour activer les fonctions IA :
+1. Créer une clé gratuite sur [Google AI Studio](https://aistudio.google.com/app/apikey).
+2. La coller dans le champ prévu sur l'écran d'accueil du jeu.
 
-📄 README.md (optionnel)
-Instructions pour exécuter le projet et comprendre son fonctionnement
+La clé reste dans le navigateur le temps de la session, elle n'est jamais enregistrée dans le code.
 
-📕 Rapport au format PDF (optionnel)
-L2_rapport_Turkan_Bouydarne.pdf : version compilée du rapport final 
+## Rapport
+
+Le rapport du projet est disponible en PDF : [L2_rapport_Turkan_Bouydarne.pdf](L2_rapport_Turkan_Bouydarne.pdf). Ses sources LaTeX et ses images sont dans le dossier `rapport/`.
+
+## Licence du jeu original
+
+Adaptation web non officielle du jeu Secret Hitler (Goat, Wolf & Cabbage), sous licence CC BY-NC-SA 4.0.
